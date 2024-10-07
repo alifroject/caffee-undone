@@ -20,7 +20,7 @@ const HomePage = () => {
       <section className='section1'>
 
 
-        <img src={home_page} className="" />
+        
         <motion.div className='inside'
           variants={fadeIn('up', '0.2')}
           initial='hidden'
