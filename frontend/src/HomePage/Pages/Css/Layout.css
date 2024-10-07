@@ -1,0 +1,37 @@
+
+  
+html, body {
+    height: 100%; /* Pastikan body memenuhi tinggi viewport */
+    margin: 0; /* Menghilangkan margin default */
+    overflow-x: hidden; /* Mencegah overflow horizontal */
+    overscroll-behavior: none; /* Menghilangkan efek overscroll behavior */
+}
+  
+  
+  /* Footer styles */
+  .footer {
+    
+    background-color: #6b7280; /* Equivalent to bg-gray-500 */
+    display: grid; /* Use grid layout for footer items */
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 16px; /* Space between grid items */
+    padding: 16px; /* Padding around the footer */
+  }
+  
+  /* Item styles */
+  .item {
+    border-width: 2px; /* Set border width */
+    padding: 8px; /* Padding for items */
+  }
+  
+  /* Specific item border colors */
+  .item1 {
+    border-color: #3b82f6; /* Equivalent to border-blue-400 */
+  }
+  
+  .item2,
+  .item3,
+  .item4 {
+    border-color: #2563eb; /* Equivalent to border-blue-500 */
+  }
+  

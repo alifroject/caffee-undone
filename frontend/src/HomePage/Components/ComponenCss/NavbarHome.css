@@ -1,0 +1,324 @@
+/* src/styles/NavbarHome.css */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
+/* styles.css atau App.css */
+.navbar {
+    display: flex;
+    justify-content: space-around; /* Center horizontally */
+    align-items: center;
+    padding: 0 20px;
+    background-color: rgba(203, 203, 203, 0.9);
+    font-family: 'Fira Sans', sans-serif;
+   
+    height: 120px;
+    position: fixed; /* Membuat navbar tetap di tempat */
+    top: 0; /* rel navbar berada di bagian atas */
+    left: 0; /* Memastikan navbar berada di sisi kiri */
+    right: 0; /* Memastikan navbar membentang ke sisi kanan */
+    z-index: 1000; /* Memastikan navbar berada di atas elemen lain */
+    overscroll-behavior: none; /* Menghilangkan efek overscroll behavior */
+   
+}
+
+
+  
+  .logo a {
+    font-size: 1.5rem;
+    color: black !important;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    color: black !important;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    
+  }
+  
+  .nav-links li a:hover {
+    text-decoration: none;
+    color: rgb(65, 59, 59) !important;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black !important;
+    background-color: #6F4E37;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+
+
+
+
+
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin-right: 0%;
+  min-width: 160px;
+  z-index: 1;
+  left: 47%;
+}
+.dropdown-menu-order {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin-right: 70%;
+  min-width: 160px;
+  z-index: 1;
+  left: 43%;
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+  text-align: right;
+  line-height: 10px;
+}
+.dropdown-menu-order li {
+  padding: 8px 16px;
+  text-align: left;
+  line-height: 10px;
+}
+.dropdown-menu li a {
+  text-decoration: none;
+  color: black;
+  
+}
+.dropdown-menu-order li a {
+  text-decoration: none;
+  color: black;
+}
+
+
+.dropdown-menu li a:hover {
+  font-weight: bold;
+  color: black;
+}
+
+.dropdown-menu-order li a:hover {
+  font-weight: bold;
+  color: black;
+}
+
+
+/* Menampilkan dropdown saat hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown:hover .dropdown-menu-order {
+  display: block;
+}
+
+
+  /* Toggle button style */
+.toggle-button {
+  display: none; /* Hidden by default */
+}
+
+/* Modal style */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  position: absolute;
+  top: 60px; /* Position below navbar */
+  right: 0;
+  width: 100%;
+  height: calc(100vh - 60px); /* Full height minus navbar height */
+  overflow-y: auto;
+}
+
+
+
+/* Media queries */
+@media (max-width: 798px) {
+  .nav-links {
+    display: none; /* Hide nav links on small screens */
+  }
+
+  .nav-buttons {
+    display: none;
+  }
+
+  .navbar > .logo {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Menempatkan logo di tengah */
+    margin-left: 50px;
+  }
+
+/* NavbarHome.css */
+
+.toggle-button {
+  display: block; /* Show toggle button on small screens */
+  background-color: #6F4E37 !important;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-radius: 0px;
+  
+}
+
+.toggle-button .bar {
+  background-color: #fff !important;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  transition: 0.3s;
+  color: black;
+}
+
+.toggle-button .bar:nth-child(1) {
+  top: 0;
+}
+
+.toggle-button .bar:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.toggle-button .bar:nth-child(3) {
+  bottom: 0;
+}
+
+.toggle-button.open .bar:nth-child(1) {
+  transform: rotate(41deg);
+  top: 50%;
+}
+
+.toggle-button.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle-button.open .bar:nth-child(3) {
+  transform: rotate(-41deg);
+  bottom: 50%;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%); /* Mulai dari bawah */
+  }
+  to {
+    transform: translateY(0); /* Bergerak ke posisi akhir */
+  }
+}
+
+.modal-nav-links {
+  animation: slideUp 0.5s ease-out;
+  list-style: none;
+  padding: 0;
+}
+
+.modal-nav-links li {
+  margin: 10px 0;
+}
+
+.modal-nav-buttons {
+  animation: slideUp 0.5s ease-out;
+  margin-top: 90px;
+  
+}
+.modal-nav-buttons > .btn {
+  width: 100%;
+}
+
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+
+
+ 
+  
+  .modal-nav-links li a {
+    color:rgb(39, 36, 36);
+    text-decoration: none !important;
+    font-size: 27px;
+    font-family: 'Fira Sans', sans-serif;
+  }
+  
+  .modal-nav-links li a:hover {
+    text-decoration: none;
+    color: black;
+  }
+
+
+  .modal-nav-links li {
+    position: relative;
+    padding: 10px 0;
+  }
+
+
+
+
+
+  /*slide up*/
+  
+  
+}
+
+@media (max-width: 540px) {
+  .logo a {
+    font-size: 22px !important;
+  }
+  .toggle-button {
+    width: 28px;
+    height: 28px;
+  }
+
+  .modal-nav-links li a {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 20px;
+  }
+
+}
+
+
+@media (max-width: 380px) {
+  .logo a {
+    font-size: 19px !important;
+  }
+  .toggle-button {
+    width: 22px;
+    height: 22px;
+  }
+
+  .modal-nav-links li a {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 15px;
+  }
+}

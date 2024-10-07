@@ -1,0 +1,711 @@
+.main-page {
+    position: relative;
+    /* Atur sebagai relative agar tetap di dalam konteks parent */
+    top: 10%;
+    /* Mengatur posisi dari atas */
+    width: 100%;
+    display: block;
+    /* Atur sebagai block */
+    height: 100%;
+    /* Mengisi tinggi */
+    color: white;
+    /* Warna teks */
+    background-color: rgb(255, 255, 255);
+}
+
+.section1 {
+    color: black;
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100vh;
+    /* Memastikan section1 mengisi tinggi viewport */
+}
+
+.section1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Warna hitam dengan opacity 50% */
+    z-index: 1;
+}
+
+.section1>img {
+
+    top: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    /* Tetap menjaga proporsi gambar */
+}
+
+
+.inside {
+    position: absolute;
+    top: 40%;
+    left: 62%;
+    z-index: 999;
+    color: white;
+
+}
+
+.inside>h1 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+
+.button-session1 {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    /* Menyelaraskan tombol di tengah */
+}
+
+.button-container {
+    margin: 0 10px;
+    /* Jarak antar tombol */
+}
+
+.Explore,
+.Order {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.Explore {
+    background-color: rgb(184, 143, 88) !important;
+    /* Aturan khusus untuk tombol Explore */
+}
+
+.Explore:hover {
+    background-color: rgb(204, 130, 32) !important;
+}
+
+.Order {
+    background-color: black !important;
+    /* Aturan khusus untuk tombol Order */
+    color: white !important;
+}
+
+.Order:hover {
+    background-color: rgb(45, 42, 42) !important;
+}
+
+
+.section {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+    /* Memastikan padding tidak menambah lebar total */
+    margin: 0;
+    /* Menghapus margin untuk menghindari jarak */
+}
+
+
+
+/*Section 2*/
+.section2 {
+
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100vh;
+    /* Memastikan section1 mengisi tinggi viewport */
+    margin: 50px;
+}
+
+
+
+.box-myelf {
+    width: 40%;
+    border: 1px solid none;
+    background-color: #724646;
+    color: black;
+    padding: 60px;
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+
+
+
+
+.section3 {
+    height: auto;
+    padding: 100px;
+}
+
+.section3 h1 {
+    color: black;
+}
+
+.section3 h1,
+.section3 h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.button-section3 {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 20px;
+    background-color: rgb(20, 20, 20) !important;
+    color: white;
+    margin-top: 90px;
+}
+
+.button-section3:hover {
+    background-color: rgb(171, 170, 170) !important;
+    color: black !important;
+}
+
+.these-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 kolom dengan lebar yang sama */
+    gap: 10px;
+    /* Jarak antar gambar */
+    width: 80%;
+    /* Lebar grid */
+    margin: 0 auto;
+    /* Pusatkan grid */
+}
+
+.these-images>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 100%;
+    /* Pastikan setiap gambar mengisi penuh kolom */
+    height: 300px;
+    /* Tentukan tinggi yang sama untuk semua gambar */
+    object-fit: cover;
+    /* Pastikan gambar menyesuaikan area tanpa distorsi */
+}
+
+.these-images>.item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.item1 {
+    background: url("../imagesCaffee/hijabi.jpg");
+}
+
+.item2 {
+    background: url("../imagesCaffee/chinese.jpg");
+
+}
+
+.item3 {
+    background: url("../imagesCaffee/mexican.jpg");
+}
+
+.item4 {
+    background: url("../imagesCaffee/black.jpg");
+}
+
+.item5 {
+    background: url("../imagesCaffee/hands.jpg");
+}
+
+
+.item5 {
+    grid-area: 1 / 2 / 3 / 3;
+    /* Posisi gambar kelima di tengah grid */
+    margin-top: 35%;
+}
+
+/* Position the images */
+
+@media (max-width: 858px) {
+    .section1 {
+
+        width: auto;
+        display: flex;
+        position: relative;
+        height: 70vh;
+    }
+
+    .section2 {
+        width: calc(100% - 0px);
+        display: flex;
+        position: relative;
+        height: 70vh;
+        margin: 20px;
+        padding: 40px;
+    }
+
+
+
+
+    .section2 img {
+        width: calc(100% - 0px);
+
+        height: 20vh;
+        /* Kurangi tinggi untuk layar lebih kecil */
+        object-fit: cover;
+        /* Tetap menjaga proporsi gambar */
+    }
+
+    .box-myelf {
+        width: 40%;
+        border: 1px solid none;
+        background-color: #724646;
+        color: black;
+        padding: 40px;
+        z-index: 3;
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        font-size: 0.7rem;
+    }
+
+
+    .section1>img {
+        height: 70vh;
+        /* Kurangi tinggi untuk layar lebih kecil */
+        object-fit: cover;
+        /* Tetap menjaga proporsi gambar */
+    }
+
+    .Explore,
+    .Order {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 10px;
+    }
+
+    .inside {
+        position: absolute;
+        top: 40%;
+        left: 60%;
+        z-index: 999;
+        color: white;
+
+    }
+
+    .inside>h1 {
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    .inside>h2 {
+        font-size: 0.8rem !important;
+    }
+
+    .button-session1 {
+        margin: 21px;
+        display: flex;
+        justify-content: left;
+        /* Menyelaraskan tombol di tengah */
+    }
+
+    /*Section 3*/
+
+
+    .section3 {
+        width: auto;
+        display: flex;
+        position: relative;
+        height: 120vh;
+        flex-direction: column;
+        padding: 60px;
+    }
+
+    .these-images>div {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: none;
+        width: 100%;
+        /* Pastikan setiap gambar mengisi penuh kolom */
+        height: 200px;
+        /* Tentukan tinggi yang sama untuk semua gambar */
+        object-fit: cover;
+        /* Pastikan gambar menyesuaikan area tanpa distorsi */
+    }
+
+    .these-images>.item {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
+    .button-section3 {
+        display: block;
+        margin: 0 auto;
+        padding: 0px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        font-family: 'Courier New', Courier, monospace;
+        border-radius: 20px;
+        background-color: rgb(20, 20, 20) !important;
+        color: white;
+        margin-top: 90px;
+    }
+
+    .section3 h1,
+    .section3 h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (max-width: 708px) {
+    .these-images>div {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: none;
+        width: 100%;
+        /* Pastikan setiap gambar mengisi penuh kolom */
+        height: 160px;
+        /* Tentukan tinggi yang sama untuk semua gambar */
+        object-fit: cover;
+        /* Pastikan gambar menyesuaikan area tanpa distorsi */
+    }
+
+    .section3 h1,
+    .section3 h2 {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .section1 {
+
+        width: auto;
+        display: flex;
+        position: relative;
+        height: 60vh;
+    }
+
+    .section1>img {
+        height: 60vh;
+        /* Kurangi tinggi lebih lanjut untuk layar lebih kecil */
+        object-fit: cover;
+        /* Tetap menjaga proporsi gambar */
+    }
+
+    .section2 {
+        width: calc(100% - 0px);
+        display: flex;
+        position: relative;
+        height: 70vh;
+    }
+
+    .section2 img {
+        width: calc(100% - 0px);
+        ;
+        height: 50vh !important;
+        /* Kurangi tinggi untuk layar lebih kecil */
+        object-fit: cover;
+        /* Tetap menjaga proporsi gambar */
+    }
+
+    .box-myelf {
+        width: 40%;
+        border: 1px solid none;
+        background-color: #724646;
+        color: black;
+        padding: 30px;
+        z-index: 3;
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        font-size: 0.6rem;
+    }
+
+
+
+    .Explore,
+    .Order {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 10px;
+    }
+
+    .inside {
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        z-index: 999;
+        color: white;
+
+    }
+
+    .inside>h1 {
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        font-weight: 700;
+        font-size: 0.8rem;
+
+    }
+
+    .inside>h2 {
+        font-size: 0.6rem !important;
+        margin-left: 26px;
+    }
+
+
+    .button-session1 {
+        margin: 16px;
+        display: flex;
+        justify-content: left;
+        /* Menyelaraskan tombol di tengah */
+    }
+
+    .Explore,
+    .Order {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 10px;
+    }
+
+    /*section 3*/
+    .these-images>div {
+
+        /* Pastikan setiap gambar mengisi penuh kolom */
+        height: 120px;
+
+        object-fit: cover;
+        /* Pastikan gambar menyesuaikan area tanpa distorsi */
+    }
+
+    .section3 {
+        width: auto;
+        display: flex;
+        position: relative;
+        height: 90vh;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+}
+
+@media (max-width: 485px) {
+    .section1 {
+
+        width: auto;
+        display: flex;
+        position: relative;
+        height: 55vh;
+    }
+
+    .section1>img {
+        height: 55vh;
+        /* Kurangi tinggi lebih lanjut untuk layar lebih kecil */
+        object-fit: cover;
+        /* Tetap menjaga proporsi gambar */
+    }
+
+    .section2 {
+        width: calc(100% - 0px);
+        display: flex;
+        position: relative;
+        height: 65vh;
+        margin: 0px !important;
+    }
+
+    .section2 img {
+        width: calc(100% - 0px);
+        ;
+        height: 35vh !important;
+        /* Kurangi tinggi untuk layar lebih kecil */
+        object-fit: cover;
+        /* Tetap menjaga proporsi gambar */
+    }
+
+    .box-myelf {
+        width: 40%;
+        border: 1px solid none;
+        background-color: #724646;
+        color: black;
+        padding: 20px;
+        z-index: 3;
+        position: absolute;
+        top: 35%;
+        left: 40%;
+        font-size: 0.5rem;
+    }
+
+    .Explore,
+    .Order {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 10px;
+    }
+
+    .inside {
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        z-index: 999;
+        color: white;
+
+    }
+
+    .inside>h1 {
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        font-weight: 700;
+        font-size: 0.7rem;
+    }
+
+    .inside>h2 {
+        font-size: 0.6rem !important;
+        margin-left: 12px;
+    }
+
+
+    .button-session1 {
+        margin-left: 30px;
+        display: flex;
+        justify-content: left;
+        /* Menyelaraskan tombol di tengah */
+    }
+
+    .button-container {
+        margin: 0 2px;
+        /* Jarak antar tombol */
+    }
+
+    .Explore,
+    .Order {
+        padding: 5px 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 8px;
+    }
+
+    /*Section 3*/
+    .these-images>div {
+
+        /* Pastikan setiap gambar mengisi penuh kolom */
+        height: 100px;
+
+        object-fit: cover;
+        /* Pastikan gambar menyesuaikan area tanpa distorsi */
+    }
+
+    .section3 {
+        width: auto;
+        display: flex;
+        position: relative;
+        height: 80vh;
+        flex-direction: column;
+        padding: 0px;
+        margin: 0% !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .section1 {
+
+        width: auto;
+        display: flex;
+        position: relative;
+        height: 50vh;
+    }
+
+    .section1>img {
+        height: 50vh;
+        /* Sesuaikan dengan layar kecil */
+        object-fit: cover;
+        /* Proporsi tetap terjaga */
+    }
+
+
+    .section2 {
+        width: calc(100% - 0px);
+        display: flex;
+        position: relative;
+        height: 65vh;
+    }
+
+    .section2 img {
+        width: calc(100% - 0px);
+        ;
+        height: 30vh !important;
+        /* Kurangi tinggi untuk layar lebih kecil */
+        object-fit: cover;
+        /* Tetap menjaga proporsi gambar */
+    }
+
+    .box-myelf {
+        width: 40%;
+        border: 1px solid none;
+        background-color: #724646;
+        color: black;
+        padding: 15px;
+        z-index: 3;
+        position: absolute;
+        top: 27%;
+        left: 40%;
+        font-size: 0.4rem;
+    }
+
+    .inside>h1 {
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        font-weight: 700;
+        font-size: 0.5rem;
+    }
+
+    .inside>h2 {
+        font-size: 0.4rem !important;
+    }
+
+
+    .button-session1 {
+        margin-left: 17px;
+        display: flex;
+        justify-content: left;
+        /* Menyelaraskan tombol di tengah */
+    }
+
+    .button-container {
+        margin: 0 2px;
+        /* Jarak antar tombol */
+    }
+
+    .Explore,
+    .Order {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 6px;
+    }
+}
